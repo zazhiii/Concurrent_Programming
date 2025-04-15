@@ -1,4 +1,4 @@
-package com.zazhi.p02_common_methods;
+package com.zazhi.P02;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -8,10 +8,10 @@ import lombok.extern.slf4j.Slf4j;
  * @description: 两阶段终止设计模式
  */
 @Slf4j
-public class TowPhaseTermination {
+public class P03_TowPhaseTermination {
 
     public static void main(String[] args) throws InterruptedException {
-        TowPhaseTermination termination = new TowPhaseTermination();
+        P03_TowPhaseTermination termination = new P03_TowPhaseTermination();
         termination.start();
         Thread.sleep(3000);
         log.debug("准备停止监控线程");

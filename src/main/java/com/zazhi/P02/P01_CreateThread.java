@@ -1,9 +1,8 @@
-package com.zazhi.p01_create_thread;
+package com.zazhi.P02;
 
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
@@ -12,10 +11,10 @@ import java.util.concurrent.FutureTask;
  * @description: 线程创建
  */
 @Slf4j
-public class Test1 {
+public class P01_CreateThread {
 
     public static void main(String[] args) {
-        Test1 test1 = new Test1();
+        P01_CreateThread test1 = new P01_CreateThread();
 //        test1.f1();
 //        test1.f2();
         test1.f3();

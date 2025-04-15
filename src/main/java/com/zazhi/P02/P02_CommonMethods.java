@@ -1,4 +1,4 @@
-package com.zazhi.p02_common_methods;
+package com.zazhi.P02;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,7 +10,7 @@ import java.util.concurrent.locks.LockSupport;
  * @description: 常用方法
  */
 @Slf4j
-public class Main {
+public class P02_CommonMethods {
     public static void main(String[] args){
 //        f1();
 //        f2();

@@ -1,4 +1,4 @@
-package com.zazhi.p03_thread_state;
+package com.zazhi.P02;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  * @description: 线程状态
  */
 @Slf4j
-public class Main {
+public class P04_ThreadState {
     public static void main(String[] args) {
         // NEW
         Thread t1 = new Thread(() -> {
@@ -40,7 +40,7 @@ public class Main {
 
         // WAITING
         Thread t5 = new Thread(() -> {
-            synchronized (Main.class) {
+            synchronized (P04_ThreadState.class) {
                 try {
                     t2.join();
                 } catch (InterruptedException e) {
@@ -52,7 +52,7 @@ public class Main {
 
         // BLOCKED
         Thread t6 = new Thread(() -> {
-            synchronized (Main.class) {
+            synchronized (P04_ThreadState.class) {
                 try {
                     t2.join();
                 } catch (InterruptedException e) {
