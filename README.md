@@ -22,6 +22,12 @@ ReentrantLock
 - 公平锁（`new ReentrantLock(true)`）
 - 条件变量（`Condition`——不同的休息室）
 
+### 五、共享模型之内存
+1. JMM
+   - 原子性
+   - 可见性(volatile 关键字)  
+   - 有序性
+
 
 # 设计模式
 1. GuardedSuspension 保护性暂停
@@ -29,7 +35,9 @@ ReentrantLock
 3. 顺序控制
    - 固定顺序
    - 交替运行
-- 
+---
+1. 两阶段终止 -- volatile
+2. balking模式 (犹豫模式, 一件事情只做一次)
 
 # 原理
 park-unpark
