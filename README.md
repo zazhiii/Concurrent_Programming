@@ -25,8 +25,9 @@ ReentrantLock
 ### 五、共享模型之内存
 1. JMM
    - 原子性
-   - 可见性(volatile 关键字)  
-   - 有序性
+   - 可见性(volatile 关键字) 
+     - happens-befores规则
+   - 有序性(指令重排；禁用指令重排：volatile)
 
 
 # 设计模式
@@ -36,11 +37,16 @@ ReentrantLock
    - 固定顺序
    - 交替运行
 ---
-1. 两阶段终止 -- volatile
-2. balking模式 (犹豫模式, 一件事情只做一次)
+第五章
+1. 两阶段终止 -- volatile实现（volatile修饰打断标记）
+2. **balking模式** (犹豫模式, 一件事情只做一次)
 
 # 原理
 park-unpark
+
+- volatile 原理
+  - 保证可见性（读屏障、写屏障）
+  - 保证有序性 
 
 # 参考资料
 https://www.bilibili.com/video/BV16J411h7Rd?p=108&vd_source=7ec6c2c9c716c60b7a5c2e5951d2b81b
