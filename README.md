@@ -29,6 +29,24 @@ ReentrantLock
      - happens-befores规则
    - 有序性(指令重排；禁用指令重排：volatile)
 
+### 六、共享模型之无锁
+
+1. 从取款案例和`AtomicInteger`类理解CAS
+
+2. CAS的特点
+   - 为什么CAS效率高
+
+3. `AtomicInteger`
+
+4. `AtomicReference`（原子引用）
+
+5. `AtomicStampedReference`（原子戳引用, 通过版本号感知修改）
+
+6. `AtomicMarkableReference`（原子标记引用, 通过布尔值感知修改）
+
+7. `AtomicIntegerArray`（原子整形数组, 保护数组中的元素）
+
+
 
 # 设计模式
 1. GuardedSuspension 保护性暂停
@@ -40,6 +58,8 @@ ReentrantLock
 第五章
 1. 两阶段终止 -- volatile实现（volatile修饰打断标记）
 2. **balking模式** (犹豫模式, 一件事情只做一次)
+
+
 
 # 原理
 park-unpark
