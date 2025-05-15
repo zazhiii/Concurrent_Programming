@@ -46,7 +46,9 @@ ReentrantLock
 
 7. `AtomicIntegerArray`（原子整形数组, 保护数组中的元素）
 
-
+8. `LongAdder`（性能更高）
+   - 原理
+   - 源码
 
 # 设计模式
 1. GuardedSuspension 保护性暂停
