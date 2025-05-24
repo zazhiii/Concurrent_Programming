@@ -1,5 +1,5 @@
 # 并发编程
-### 四、共享模型之管程
+## 四、共享模型之管程
 
 park-unpark 使用与原理
 
@@ -22,14 +22,14 @@ ReentrantLock
 - 公平锁（`new ReentrantLock(true)`）
 - 条件变量（`Condition`——不同的休息室）
 
-### 五、共享模型之内存
+## 五、共享模型之内存
 1. JMM
    - 原子性
    - 可见性(volatile 关键字) 
      - happens-befores规则
    - 有序性(指令重排；禁用指令重排：volatile)
 
-### 六、共享模型之无锁
+## 六、共享模型之无锁
 
 1. 从取款案例和`AtomicInteger`类理解CAS
 
@@ -49,6 +49,18 @@ ReentrantLock
 8. `LongAdder`（性能更高）
    - 原理
    - 源码
+
+## 八、共享模型之工具
+1. 手写线程池
+2. `ThreadPoolExecutor`
+   1. 线程池的状态
+   2. 构造方法（重要）
+   3. `Executors`类
+   4. `submit()`方法
+   5. `invokeAll()`方法
+   6. `invokeAny()`方法
+   7. `shutdown()`方法 -- 不会停止已经提交的任务
+   8. `shutdownNow()`方法 -- 会停止已经提交的任务
 
 # 设计模式
 1. GuardedSuspension 保护性暂停

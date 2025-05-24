@@ -1,6 +1,6 @@
-package com.zazhi.P08.C01;
+package com.zazhi.P08.C01_custom_thread_pool;
 
-import com.zazhi.P08.C01.reject_policy.RejectPolicy;
+import com.zazhi.P08.C01_custom_thread_pool.reject_policy.RejectPolicy;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashSet;

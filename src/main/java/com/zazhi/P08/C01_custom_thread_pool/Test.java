@@ -1,6 +1,6 @@
-package com.zazhi.P08.C01;
+package com.zazhi.P08.C01_custom_thread_pool;
 
-import com.zazhi.P08.C01.reject_policy.CallerRunsPolicy;
+import com.zazhi.P08.C01_custom_thread_pool.reject_policy.CallerRunsPolicy;
 
 import java.util.concurrent.TimeUnit;
 

@@ -1,6 +1,6 @@
-package com.zazhi.P08.C01.reject_policy;
+package com.zazhi.P08.C01_custom_thread_pool.reject_policy;
 
-import com.zazhi.P08.C01.BlockingQueue;
+import com.zazhi.P08.C01_custom_thread_pool.BlockingQueue;
 import lombok.extern.slf4j.Slf4j;
 
 /**
