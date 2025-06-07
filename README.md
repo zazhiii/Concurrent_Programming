@@ -61,7 +61,19 @@ ReentrantLock
    6. `invokeAny()`方法
    7. `shutdown()`方法 -- 不会停止已经提交的任务
    8. `shutdownNow()`方法 -- 会停止已经提交的任务
-
+3. 工作线程设计模式（Worker Thread）-- 典型实现为线程池
+   1. 饥饿的解决方式：不同的任务使用不同的线程池
+   2. 池大小
+      1. CPU 密集型任务：CPU 核心数 + 1
+      2. IO 密集型任务：CPU 核心数 * 2
+4. `Timer`类（不推荐使用）
+5. `ScheduledThreadPoolExecutor`
+   - 定时执行任务: `schedule()`
+   - 周期执行任务: `scheduleAtFixedRate()`, `scheduleWithFixedDelay()` 注意二者的区别
+6. 处理线程池中的异常
+   1. 在任务中 try-catch
+   2. 使用`Future`的`get()`方法, 异常会封装到其中
+7. `Fork/Join`线程池
 # 设计模式
 1. GuardedSuspension 保护性暂停
 2. 生产者消费者
