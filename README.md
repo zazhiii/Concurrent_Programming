@@ -74,6 +74,11 @@ ReentrantLock
    1. 在任务中 try-catch
    2. 使用`Future`的`get()`方法, 异常会封装到其中
 7. `Fork/Join`线程池
+8. AQS -- AbstractQueuedSynchronizer 抽象队列同步器
+   1. AQS概念
+   2. 自定义锁
+   3. `ReentrantLock`的实现原理
+
 # 设计模式
 1. GuardedSuspension 保护性暂停
 2. 生产者消费者
