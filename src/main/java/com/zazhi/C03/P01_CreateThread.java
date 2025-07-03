@@ -1,4 +1,4 @@
-package com.zazhi.P02;
+package com.zazhi.C03;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,14 +18,16 @@ public class P01_CreateThread {
 //        test1.f1();
 //        test1.f2();
         test1.f3();
+
     }
-    // 方式1：直接使用 Thread 类
+    // 方式1：直接使用 Thread 类 / 继承Thread类
     public void f1(){
-        Thread t1 = new Thread(() -> {
-            log.debug("running");
-        }, "t1" ); // 线程名称
-        t1.start();
-        log.debug("running");
+        Thread thread = new Thread("t1") {
+            @Override
+            public void run() {
+                log.debug("running");
+            }
+        };
     }
 
     // 方式2：Runnable 配合 Thread
@@ -42,7 +44,7 @@ public class P01_CreateThread {
     public void f3(){
 
         // 泛型定义返回值类型
-        Callable callable = () -> {
+        Callable<Integer> callable = () -> {
             log.debug("经过漫长的计算。。。");
             Thread.sleep(1000);
             return 1 + 1;
