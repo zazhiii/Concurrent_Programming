@@ -1,11 +1,8 @@
-package com.zazhi.P03;
+package com.zazhi.C04.wait_notify;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

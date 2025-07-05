@@ -1,4 +1,4 @@
-package com.zazhi.P03;
+package com.zazhi.C04.wait_notify;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -6,23 +6,21 @@ import lombok.extern.slf4j.Slf4j;
  * @author zazhi
  * @date 2025/4/26
  * @description: 设计模式 -- 保护性暂停
- * GuardedSuspension: 一个线程等待另一个线程的通知
  *
- * 用GuardedSuspension模式与join()的好处
- * 1. 不用等待线程执行结束, 提交后就可以继续执行
- * 2. 用join()的等待结果变量只能设计成全局变量, 而GuardedSuspension可以设计成局部变量
+ * 拓展: 超时等待
+ *
  */
 @Slf4j
-public class P06_DesignPatterns_GuardedSuspension {
+public class P06_DesignPatterns_GuardedSuspension02 {
     // 模拟场景: 线程1等待线程2的下载结果
 
     public static void main(String[] args) {
 
-        GuardedObject guardedObject = new GuardedObject();
+        GuardedObjectV2 guardedObject = new GuardedObjectV2();
 
         new Thread(() -> {
             log.debug("线程1: 等待下载结果...");
-            Object resp = guardedObject.get();// 等待下载结果 超时等待
+            Object resp = guardedObject.get(1000);// 等待下载结果 超时等待
             log.debug("线程1: 下载结果: {}", resp);
         }, "t1").start();
 
@@ -42,18 +40,25 @@ public class P06_DesignPatterns_GuardedSuspension {
     }
 }
 
-class GuardedObject{
+class GuardedObjectV2{
     private Object response;
 
-    public Object get(){
+    public Object get(long timeout){
+        long start = System.currentTimeMillis();
+        long passed = 0;
         while(response == null){
+            if(passed > timeout){ // 超时
+                break;
+            }
             synchronized(this){
                 try {
-                    this.wait(); // 等待通知
+                    this.wait(timeout - passed); // 等待通知
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }
             }
+            // 计算等待时间
+            passed = System.currentTimeMillis() - start;
         }
         return response;
     }

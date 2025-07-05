@@ -1,4 +1,4 @@
-package com.zazhi.P03;
+package com.zazhi.C04.wait_notify;
 
 import lombok.extern.slf4j.Slf4j;
 

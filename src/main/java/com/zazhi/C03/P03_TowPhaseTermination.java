@@ -33,9 +33,7 @@ public class P03_TowPhaseTermination {
                     log.debug("线程被打断，料理后事");
                     break;
                 }
-
                 log.debug("监控线程正在运行");
-
                 try {
                     Thread.sleep(1000); // 模拟监控间隔
                 } catch (InterruptedException e) {
